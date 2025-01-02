@@ -1,0 +1,5 @@
+import ObjectiveC
+
+extension NSObject {
+    
+}
