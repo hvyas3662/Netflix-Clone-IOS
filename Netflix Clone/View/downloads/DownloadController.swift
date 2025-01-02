@@ -80,8 +80,8 @@ extension DownloadController: UITableViewDataSource, UITableViewDelegate {
             DownloadRepository.shared.deleteFromDownload(title: titleList[indexPath.row]) { result in
                 switch result {
                 case .success():
-                    tableView.deleteRows(at: [indexPath], with: .fade)
                     self.titleList.remove(at: indexPath.row)
+                    tableView.deleteRows(at: [indexPath], with: .fade)
                 case .failure(let error):
                     print(error)
                 }
